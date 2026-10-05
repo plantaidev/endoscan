@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Confidentialité · EndoScan</title><meta name="description" content="EndoScan : informations sur la composition des produits du quotidien, pour les femmes atteintes d'endométriose ou du SOPK.">
+<style>
+:root{--bg:#FBF6F1;--ink:#2E1F1A;--muted:#6E5D55;--line:#E8DDD3;--card:#FFFFFF;--accent:#B5523B;--soft:#F6E3DA}
+@media (prefers-color-scheme:dark){:root{--bg:#1E1512;--ink:#F5ECE6;--muted:#BBA99F;--line:#3A2C26;--card:#2A1E1A;--accent:#E08A72;--soft:#3A2620}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:26px;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}nav a{color:var(--muted);text-decoration:none}nav a.on{color:var(--ink);font-weight:600}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:38px;line-height:1.15;margin:32px 0 8px}
+h2{font-size:20px;margin:36px 0 8px}h3{font-size:17px;margin:24px 0 6px}
+p,li{color:var(--ink)}.muted{color:var(--muted)}a{color:var(--accent)}
+.table{overflow-x:auto;margin:12px 0}table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}th{font-size:13px;color:var(--muted);font-weight:600}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:16px 0}
+.note{background:var(--soft);border-radius:16px;padding:14px 18px}
+mark{background:#FFE58A;color:#2E1F1A;padding:0 3px;border-radius:3px}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html">EndoScan</a><nav><a href="index.html">Aide et contact</a><a href="confidentialite.html" class=on>Confidentialité</a><a href="conditions.html">Conditions</a><a href="mentions-legales.html">Mentions légales</a></nav></header>
+
+<h1>Politique de confidentialité</h1>
+<p class="muted">Dernière mise à jour : <mark>[date de publication]</mark></p>
+<p>EndoScan aide les personnes atteintes d'endométriose ou du SOPK à choisir leurs produits du quotidien. Certaines informations que vous nous confiez concernent votre santé. Nous en collectons le moins possible, nous les gardons de préférence sur votre téléphone, et nous ne les vendons ni ne les partageons jamais à des fins publicitaires.</p>
+<h2>Qui est responsable de vos données</h2>
+<p><mark>[Prénom Nom], entrepreneur individuel</mark>, <mark>[adresse postale]</mark>, ci-après « EndoScan », est responsable du traitement. Contact : <a href="mailto:endoscanfrance@gmail.com">endoscanfrance@gmail.com</a>.</p>
+<h2>Les données que nous traitons</h2>
+<div class="table"><table>
+<tr><th>Données</th><th>Exemples</th><th>Où elles sont gardées</th></tr>
+<tr><td>Votre situation</td><td>Endométriose, SOPK, les deux, ou « je ne sais pas »</td><td>Sur votre téléphone</td></tr>
+<tr><td>Votre profil</td><td>Prénom, priorités, sensibilités (gluten, lactose, soja…), préférence bio, symptômes suivis</td><td>Sur votre téléphone</td></tr>
+<tr><td>Votre journal</td><td>Douleur, fatigue, ballonnements et autres symptômes, règles, repas notés, estimation des prochaines règles</td><td>Sur votre téléphone</td></tr>
+<tr><td>Votre activité</td><td>Produits scannés, produits « Chez moi », liste de courses, codes non trouvés, nombre de scans gratuits utilisés</td><td>Sur votre téléphone</td></tr>
+<tr><td>Votre compte, si vous en créez un</td><td>Adresse e-mail, nom, identifiant Apple ou Google</td><td>Chez notre hébergeur Supabase (serveurs en Irlande, Union européenne)</td></tr>
+<tr><td>Vos recherches de produits</td><td>Code-barres scanné, mots tapés dans la recherche</td><td>Envoyés à Open Food Facts, Open Beauty Facts et Open Products Facts, sans votre identité</td></tr>
+<tr><td>Vos photos d'assiette</td><td>Photo d'un repas, prise dans l'onglet Scan</td><td>Envoyée à notre serveur puis à Anthropic pour l'analyse, sans votre identité ; non conservée par EndoScan. Seuls le nom du plat et les ingrédients reconnus restent sur votre téléphone</td></tr>
+<tr><td>Vos photos d'étiquette</td><td>Photo de la liste d'ingrédients d'un produit introuvable</td><td>Envoyée à notre serveur puis à Anthropic pour la lecture, sans votre identité ; non conservée par EndoScan</td></tr>
+<tr><td>La base partagée</td><td>Code-barres, nom, marque et composition d'un produit lu sur une étiquette</td><td>Chez Supabase (Irlande), visible par toutes les utilisatrices ; ne contient aucune information sur vous</td></tr>
+<tr><td>Statistiques d'usage</td><td>Ouverture de l'app, scan réussi ou introuvable, journal rempli (sans son contenu), avec un identifiant tiré au hasard</td><td>Chez Supabase (Irlande), sans nom, e-mail, produit ni donnée de santé</td></tr>
+<tr><td>Votre abonnement</td><td>Formule choisie, date de renouvellement</td><td>Chez Apple ; nous ne voyons jamais vos coordonnées bancaires</td></tr>
+</table></div>
+<p>Votre situation, vos sensibilités, vos symptômes et votre journal sont des <strong>données de santé</strong>. Nous ne les enregistrons qu'avec votre consentement explicite, demandé dans l'app avant toute utilisation. Aujourd'hui, elles ne quittent pas votre téléphone.</p>
+<p>EndoScan n'utilise ni publicité ni traceur publicitaire. Une mesure d'audience minimale (le nom d'un geste et le jour, liés à un identifiant tiré au hasard) sert à savoir si l'app est utile ; elle repose sur notre intérêt légitime.</p>
+<h2>Pourquoi nous les utilisons, et sur quelle base</h2>
+<div class="table"><table>
+<tr><th>Utilisation</th><th>Base légale</th></tr>
+<tr><td>Calculer des scores adaptés à votre situation et à vos sensibilités</td><td>Votre consentement explicite (RGPD, art. 9.2.a)</td></tr>
+<tr><td>Afficher vos tendances et estimer vos prochaines règles à partir de votre journal</td><td>Votre consentement explicite (RGPD, art. 9.2.a)</td></tr>
+<tr><td>Créer et gérer votre compte, vous connecter avec Apple ou Google</td><td>L'exécution de nos conditions d'utilisation (art. 6.1.b)</td></tr>
+<tr><td>Fournir l'abonnement EndoScan+</td><td>L'exécution du contrat (art. 6.1.b)</td></tr>
+<tr><td>Trouver ou lire la composition d'un produit, analyser une assiette</td><td>L'exécution de nos conditions d'utilisation (art. 6.1.b)</td></tr>
+<tr><td>Enrichir la base partagée avec les étiquettes lues</td><td>Notre intérêt légitime ; aucune donnée personnelle n'y figure</td></tr>
+<tr><td>Mesurer l'audience de façon minimale</td><td>Notre intérêt légitime (art. 6.1.f)</td></tr>
+<tr><td>Vous envoyer le rappel du soir et l'annonce de vos règles, si vous les activez</td><td>Votre consentement ; les notifications sont créées sur votre téléphone</td></tr>
+</table></div>
+<p>Vous pouvez retirer votre consentement à tout moment, depuis l'app. Les scores redeviennent alors généraux.</p>
+<h2>Qui reçoit vos données</h2>
+<p>Seuls ces prestataires reçoivent des données, chacun pour son rôle :</p>
+<ul>
+<li><strong>Supabase Inc.</strong> héberge les comptes, la base partagée et les statistiques d'usage (serveurs en Irlande).</li>
+<li><strong>Apple</strong> et <strong>Google</strong> vous identifient quand vous choisissez de vous connecter avec eux.</li>
+<li><strong>Apple</strong> gère le paiement de l'abonnement.</li>
+<li><strong>Open Food Facts</strong>, <strong>Open Beauty Facts</strong> et <strong>Open Products Facts</strong>, bases associatives, reçoivent le code-barres ou le texte recherché, sans aucune information sur vous.</li>
+<li><strong>Anthropic</strong> (IA Claude) reçoit la photo d'une assiette ou d'une liste d'ingrédients, quand vous en prenez une, pour la lire. La photo est transmise sans votre identité ; selon les conditions d'Anthropic pour les entreprises, elle n'est pas utilisée pour entraîner ses modèles et n'est conservée que pour une durée limitée. EndoScan ne la garde pas.</li>
+</ul>
+<p>Supabase, Apple, Google et Anthropic sont des entreprises américaines. Quand des données peuvent être transférées hors de l'Union européenne, ces transferts sont encadrés par les garanties prévues par le RGPD, comme les clauses contractuelles types de la Commission européenne.</p>
+<h2>Combien de temps nous les gardons</h2>
+<ul>
+<li><strong>Données sur votre téléphone :</strong> jusqu'à ce que vous les supprimiez dans l'app ou que vous supprimiez l'app.</li>
+<li><strong>Compte :</strong> tant qu'il existe. Il est supprimé dès que vous le demandez, ou après 3 ans sans connexion.</li>
+<li><strong>Statistiques d'usage :</strong> 13 mois au plus.</li>
+<li><strong>Base partagée :</strong> tant que le produit est utile ; elle ne contient aucune donnée personnelle.</li>
+<li><strong>Données de facturation :</strong> conservées par Apple, selon ses propres obligations.</li>
+</ul>
+<h2>Vos droits</h2>
+<p>Vous pouvez accéder à vos données, les corriger, les supprimer, les récupérer dans un format lisible, limiter ou refuser leur utilisation, et retirer votre consentement. Vous pouvez aussi donner des directives sur le sort de vos données après votre décès.</p>
+<ul>
+<li><strong>Dans l'app :</strong> Profil, puis « Confidentialité et données », puis « Supprimer mes données ». Ce bouton efface vos données du téléphone et supprime votre compte en ligne.</li>
+<li><strong>Par e-mail :</strong> <a href="mailto:endoscanfrance@gmail.com">endoscanfrance@gmail.com</a>. Nous répondons sous un mois au plus tard.</li>
+</ul>
+<p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+<h2>Sécurité</h2>
+<p>Les échanges entre l'app et nos serveurs sont chiffrés (HTTPS). L'accès aux comptes est réservé à chaque utilisatrice et, pour l'administration, à l'éditeur.</p>
+<h2>Âge minimum</h2>
+<p>EndoScan est réservé aux personnes de 15 ans et plus. En dessous, l'accord d'un parent est nécessaire.</p>
+<h2>Modifications</h2>
+<p>Nous vous prévenons dans l'app avant toute modification importante de cette politique, par exemple si une nouvelle fonction envoie des données de santé sur nos serveurs.</p>
+
+<footer>EndoScan · <a href="mailto:endoscanfrance@gmail.com">endoscanfrance@gmail.com</a> · EndoScan n'est pas un dispositif médical et ne remplace pas l'avis d'un médecin.</footer>
+</div></body></html>
