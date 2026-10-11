@@ -1,42 +1,177 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aide et contact · EndoScan</title><meta name="description" content="EndoScan : informations sur la composition des produits du quotidien, pour les femmes atteintes d'endométriose ou du SOPK.">
+<title>EndoScan · Ce qu'il y a dans vos produits</title>
+<meta name="description" content="EndoScan scanne vos protections intimes, cosmétiques et aliments et vous donne un score sur 100, pensé pour l'endométriose et le SOPK, avec une alternative mieux notée.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,400..600,0;1,9..144,400..600,0&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FBF6F1;--ink:#2E1F1A;--muted:#6E5D55;--line:#E8DDD3;--card:#FFFFFF;--accent:#B5523B;--soft:#F6E3DA}
-@media (prefers-color-scheme:dark){:root{--bg:#1E1512;--ink:#F5ECE6;--muted:#BBA99F;--line:#3A2C26;--card:#2A1E1A;--accent:#E08A72;--soft:#3A2620}}
+/* Mise en page : une arche cacao (la forme du logo) porte la démonstration ; le reste est calme, aligné à gauche. */
+:root{--cream:#F4ECE2;--paper:#FFFCF8;--cacao:#2E1F1A;--cacao2:#3B2923;--muted:#75605A;--line:#E3D4C4;--terra:#B0512F;--terra-soft:#F2D9CB;
+--lilac:#E7DEF1;--lilac-ink:#5B4A7A;--good:#5A8A4C;--good-ink:#3F6B34;--ok:#D6A631;--ok-ink:#86661A;--limit:#E68A45;--bad:#B3332A;--on-cacao:#F1E4D8;--on-cacao-muted:#BFAA9E;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Hanken Grotesk",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--cream:#1F1512;--paper:#2B1D18;--cacao:#120C0A;--cacao2:#2B1D18;--muted:#BFAA9E;--line:#4A3730;--terra:#E9A283;--terra-soft:#4A2E24;--lilac:#3A3149;--lilac-ink:#D8CBEA;--good-ink:#9CC58D;--ok-ink:#E8C766;color-scheme:dark}
+body{color:#F1E4D8}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.brand{font-family:Georgia,"Times New Roman",serif;font-size:26px;color:var(--ink);text-decoration:none}
-nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}nav a{color:var(--muted);text-decoration:none}nav a.on{color:var(--ink);font-weight:600}
-h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:38px;line-height:1.15;margin:32px 0 8px}
-h2{font-size:20px;margin:36px 0 8px}h3{font-size:17px;margin:24px 0 6px}
-p,li{color:var(--ink)}.muted{color:var(--muted)}a{color:var(--accent)}
-.table{overflow-x:auto;margin:12px 0}table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
-th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}th{font-size:13px;color:var(--muted);font-weight:600}
-.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:16px 0}
-.note{background:var(--soft);border-radius:16px;padding:14px 18px}
-mark{background:#FFE58A;color:#2E1F1A;padding:0 3px;border-radius:3px}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-</style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">EndoScan</a><nav><a href="index.html" class=on>Aide et contact</a><a href="confidentialite.html">Confidentialité</a><a href="conditions.html">Conditions</a><a href="mentions-legales.html">Mentions légales</a></nav></header>
+body{margin:0;background:var(--cream);color:var(--cacao);font:17px/1.6 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;font-variation-settings:"WONK" 0;text-wrap:balance;margin:0}
+a{color:var(--terra)}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:24px;color:inherit;text-decoration:none}
+.logo img{width:36px;height:36px;border-radius:10px}
+.top nav{display:flex;gap:18px;font-size:15px}.top nav a{color:var(--muted);text-decoration:none}.top nav a:hover{color:inherit}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding-block:28px 72px}
+.hero h1{font-size:clamp(40px,5.6vw,68px);line-height:1.02;letter-spacing:-.01em}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:34em;margin:22px 0 28px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cacao);color:var(--on-cacao);text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px}
+@media (prefers-color-scheme:dark){.btn{background:var(--terra);color:#1F1512}}
+.btn:hover{filter:brightness(1.12)}
+.fine{font-size:14px;color:var(--muted);margin-top:14px}
+/* L'arche */
+.arch{position:relative;background:var(--cacao);color:var(--on-cacao);border-radius:260px 260px 28px 28px;padding:56px 28px 28px;min-height:520px;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+.arch::before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:var(--cacao2);right:-40px;top:120px}
+.arch::after{content:"";position:absolute;width:96px;height:96px;border-radius:50%;background:#D98E62;left:-34px;bottom:-34px;opacity:.85}
+.arch>*{position:relative;z-index:1}
+.ask{font-size:14px;color:var(--on-cacao-muted);margin:0 0 6px;text-align:center}
+.ring{width:190px;height:190px;position:relative;margin:4px 0 6px}
+.ring svg{transform:rotate(-90deg)}
+.ring .track{stroke:#4A3730}.ring .bar{transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1),stroke .4s}
+.ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .num b{font-family:var(--serif);font-weight:400;font-size:64px;line-height:1;font-variation-settings:"WONK" 0}
+.ring .num span{font-size:13px;color:var(--on-cacao-muted)}
+.verdict{font-family:var(--serif);font-style:italic;font-size:30px;margin:2px 0 14px;font-variation-settings:"WONK" 0}
+.reasons{list-style:none;margin:0 0 18px;padding:0;width:100%;max-width:330px;font-size:15px}
+.reasons li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid #4A3730}
+.reasons li small{display:block;color:var(--on-cacao-muted);font-size:13px}
+.reasons li em{font-style:normal;color:#E9A283;white-space:nowrap}
+.pick{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:auto}
+.pick button{font:600 14px var(--sans);color:var(--on-cacao);background:transparent;border:1.5px solid #5E4840;border-radius:999px;padding:9px 14px;cursor:pointer}
+.pick button[aria-pressed="true"]{background:var(--on-cacao);color:var(--cacao);border-color:var(--on-cacao)}
+.swap{font-size:14px;color:var(--on-cacao-muted);text-align:center;min-height:22px;margin-bottom:12px}
+.swap b{color:var(--on-cacao)}
+/* Sections */
+section.band{padding-block:72px;border-top:1px solid var(--line)}
+section.band h2{font-size:clamp(30px,3.6vw,42px);line-height:1.1;max-width:18em}
+.intro{color:var(--muted);max-width:38em;margin:14px 0 0}
+.aisles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:40px}
+.aisles h3{font-size:24px;margin:14px 0 6px}.aisles p{margin:0;color:var(--muted)}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--terra-soft);display:grid;place-items:center}
+.ico svg{width:24px;height:24px;stroke:var(--terra);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.scale{margin-top:40px;max-width:760px}
+.scale .bars{display:grid;grid-template-columns:25fr 25fr 25fr 26fr;gap:4px;height:14px}
+.scale .bars i{border-radius:4px}
+.scale .labels{display:grid;grid-template-columns:25fr 25fr 25fr 26fr;gap:4px;margin-top:10px;font-size:14px}
+.scale .labels b{display:block;font-weight:600}.scale .labels span{color:var(--muted);font-variant-numeric:tabular-nums}
+.method{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 48px;margin-top:40px;max-width:900px}
+.method h3{font-size:22px;margin-bottom:4px}.method p{margin:0;color:var(--muted)}
+.not{background:var(--lilac);color:var(--lilac-ink);border-radius:28px;padding:36px;margin-top:8px}
+.not h2{color:var(--lilac-ink)}.not p{max-width:40em;margin:12px 0 0}
+.contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.contact h2{max-width:14em}
+.faq{margin-top:28px;max-width:760px}
+.faq details{border-top:1px solid var(--line);padding:4px 0}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:21px;padding:14px 32px 14px 0;position:relative;font-variation-settings:"WONK" 0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:10px;font-family:var(--sans);font-size:24px;color:var(--terra)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 16px;color:var(--muted);max-width:40em}
+footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:16px}footer a{color:var(--muted)}
+@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr);gap:36px;padding-top:8px}.aisles{grid-template-columns:minmax(0,1fr);gap:28px}.method{grid-template-columns:minmax(0,1fr)}.arch{min-height:0}}
+@media (max-width:520px){.top nav a.hide{display:none}.scale .labels{font-size:12px}.not{padding:26px}}
+@media (prefers-reduced-motion:reduce){.ring .bar{transition:none}}
+</style></head><body>
+<div class="wrap">
+<header class="top"><a class="logo" href="index.html"><img src="icon.png" alt="">EndoScan</a>
+<nav><a class="hide" href="#methode">La méthode</a><a href="#aide">Aide</a><a href="#contact">Contact</a></nav></header>
 
-<h1>Aide et contact</h1>
-<p class="muted">EndoScan vous éclaire sur la composition de vos aliments, cosmétiques et protections intimes, à la lumière des études publiées sur l'endométriose et le SOPK.</p>
-<div class="box"><h3 style="margin-top:0">Nous écrire</h3>
-<p>Une question, un produit mal noté, un problème de compte ou d'abonnement : écrivez-nous à <a href="mailto:endoscanfrance@gmail.com">endoscanfrance@gmail.com</a>. Nous répondons en général sous quelques jours.</p></div>
+<section class="hero">
+<div>
+<h1>Ce qu'il y a dans vos protections, vos crèmes et votre assiette.</h1>
+<p class="lead">Scannez le code-barres. EndoScan lit la composition et vous donne un score sur 100, pensé pour l'endométriose et le SOPK, avec ce qui pèse dans la note et une alternative mieux notée.</p>
+<a class="btn" href="#methode">Voir comment c'est noté</a>
+<p class="fine">Sur iPhone. Vos données de santé restent sur votre téléphone.</p>
+</div>
+<div class="arch" aria-label="Exemple de résultat EndoScan">
+<p class="ask">Exemple : touchez un produit</p>
+<div class="ring" role="img" id="ring-label" aria-label="Score 54 sur 100, Correct">
+<svg width="190" height="190" viewBox="0 0 190 190" aria-hidden="true"><circle class="track" cx="95" cy="95" r="84" fill="none" stroke-width="13"/>
+<circle class="bar" id="bar" cx="95" cy="95" r="84" fill="none" stroke-width="13" stroke-linecap="round" stroke="#D6A631" stroke-dasharray="527.8" stroke-dashoffset="242.8"/></svg>
+<div class="num"><b id="score">54</b><span>/100</span></div></div>
+<p class="verdict" id="verdict">Correct</p>
+<ul class="reasons" id="reasons"></ul>
+<p class="swap" id="swap"></p>
+<div class="pick" role="group" aria-label="Produits d'exemple" id="pick"></div>
+</div>
+</section>
+</div>
+
+<section class="band"><div class="wrap">
+<h2>Trois rayons où l'on ne sait jamais trop quoi prendre.</h2>
+<div class="aisles">
+<div><div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M10 8h4"/></svg></div>
+<h3>Protections intimes</h3><p>Parfum ajouté, blanchiment au chlore, lotion sur le voile : ce qui ne figure pas toujours en gros sur le paquet. Plus de 120 protections et produits intimes déjà notés.</p></div>
+<div><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3h6v4H9zM7 7h10l1 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/></svg></div>
+<h3>Cosmétiques</h3><p>Parabènes, phtalates, filtres UV, allergènes parfumants : les ingrédients étudiés comme perturbateurs endocriniens, repérés dans la liste INCI.</p></div>
+<div><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M8 13a4 4 0 0 0 8 0"/></svg></div>
+<h3>Alimentation</h3><p>Sucres ajoutés, ultra-transformés, oméga-3, fibres. Même une assiette faite maison s'analyse en photo.</p></div>
+</div></div></section>
+
+<section class="band" id="methode"><div class="wrap">
+<h2>Une note que vous pouvez vérifier.</h2>
+<p class="intro">Chaque score se décompose : ce qui retire des points, ce qui en ajoute, et l'étude sur laquelle chaque point s'appuie, avec son niveau de preuve.</p>
+<div class="scale" aria-label="Échelle des scores">
+<div class="bars"><i style="background:var(--bad)"></i><i style="background:var(--limit)"></i><i style="background:var(--ok)"></i><i style="background:var(--good)"></i></div>
+<div class="labels"><div><b>À éviter</b><span>0 à 24</span></div><div><b>À limiter</b><span>25 à 49</span></div><div><b>Correct</b><span>50 à 74</span></div><div><b>Favorable</b><span>75 à 100</span></div></div>
+</div>
+<div class="method">
+<div><h3>Votre profil compte</h3><p>Endométriose, SOPK ou les deux : les sucres pèsent plus lourd pour le SOPK, et vos sensibilités (lactose, gluten…) sont prises en compte.</p></div>
+<div><h3>Des sources citées</h3><p>Études publiées, avis de l'Anses et de l'OMS. Quand les preuves sont limitées, l'app le dit.</p></div>
+<div><h3>Toujours une alternative</h3><p>Dans le même rayon, au même niveau d'absorption pour les protections, et de préférence dans votre magasin.</p></div>
+<div><h3>Un produit introuvable ?</h3><p>Photographiez sa liste d'ingrédients : EndoScan la lit, vous vérifiez, et la fiche profite ensuite aux autres utilisatrices.</p></div>
+</div></div></section>
+
+<section class="band"><div class="wrap">
+<div class="not"><h2>Ce qu'EndoScan ne fait pas.</h2>
+<p>EndoScan informe sur la composition des produits. Il ne pose aucun diagnostic, ne propose aucun traitement et ne remplace pas l'avis de votre médecin. En cas de douleur inhabituelle ou intense, consultez.</p></div>
+</div></section>
+
+<section class="band" id="aide"><div class="wrap">
 <h2>Questions fréquentes</h2>
-<h3>Comment est calculé le score ?</h3>
-<p>Chaque produit part d'une note de base, puis gagne ou perd des points selon sa composition : sucres ajoutés, additifs, perturbateurs endocriniens suspectés, parfums, etc. Le détail et les sources sont dans l'app, sous « Comprendre pourquoi ». La liste figurant sur l'emballage fait toujours foi.</p>
-<h3>Un produit est introuvable ?</h3>
-<p>Prenez en photo sa liste d'ingrédients depuis l'app : EndoScan la lit et calcule un score. La composition rejoint ensuite la base partagée, pour que les autres utilisatrices le trouvent aussi.</p>
-<h3>Comment résilier EndoScan+ ?</h3>
-<p>Sur iPhone : Réglages, puis votre nom, puis Abonnements, puis EndoScan. Supprimer l'app ne résilie pas l'abonnement. Les remboursements se demandent à Apple, sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
-<h3>Comment supprimer mes données ?</h3>
-<p>Dans l'app : Profil, puis « Confidentialité et données », puis « Supprimer mes données ». Vos données sont effacées du téléphone et votre compte en ligne est supprimé. Vous pouvez aussi nous le demander par e-mail.</p>
-<h3>EndoScan remplace-t-il un avis médical ?</h3>
-<p>Non. EndoScan informe sur la composition des produits ; il ne pose aucun diagnostic et ne propose aucun traitement. En cas de douleur inhabituelle ou intense, consultez.</p>
+<div class="faq">
+<details><summary>Comment est calculé le score ?</summary><p>Chaque produit part d'une note de base, puis gagne ou perd des points selon sa composition : sucres ajoutés, additifs, perturbateurs endocriniens suspectés, parfums, blanchiment au chlore… Le détail et les sources sont dans l'app, sous « Comprendre pourquoi ». La liste figurant sur l'emballage fait toujours foi.</p></details>
+<details><summary>Un produit est introuvable ?</summary><p>Prenez en photo sa liste d'ingrédients depuis l'app : EndoScan la lit, vous vérifiez, puis la composition rejoint la base partagée pour que les autres utilisatrices le trouvent aussi.</p></details>
+<details><summary>Comment résilier EndoScan+ ?</summary><p>Sur iPhone : Réglages, puis votre nom, puis Abonnements, puis EndoScan. Supprimer l'app ne résilie pas l'abonnement. Les remboursements se demandent à Apple, sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p></details>
+<details><summary>Comment supprimer mes données ?</summary><p>Dans l'app : Profil, puis « Confidentialité et données », puis « Supprimer mes données ». Vos données sont effacées du téléphone et votre compte en ligne est supprimé. Vous pouvez aussi nous le demander par e-mail.</p></details>
+<details><summary>EndoScan remplace-t-il un avis médical ?</summary><p>Non. EndoScan informe sur la composition des produits ; il ne pose aucun diagnostic et ne propose aucun traitement. En cas de douleur inhabituelle ou intense, consultez.</p></details>
+</div></div></section>
 
-<footer>EndoScan · <a href="mailto:endoscanfrance@gmail.com">endoscanfrance@gmail.com</a> · EndoScan n'est pas un dispositif médical et ne remplace pas l'avis d'un médecin.</footer>
-</div></body></html>
+<section class="band" id="contact"><div class="wrap contact">
+<h2>Une question, un produit mal noté ?</h2>
+<div><a class="btn" href="mailto:endoscanfrance@gmail.com">Nous écrire</a>
+<p class="fine">endoscanfrance@gmail.com · réponse en général sous quelques jours.</p></div>
+</div></section>
+
+<div class="wrap"><footer><span>EndoScan · Paul Grimaldi Huck, entrepreneur individuel (micro-entreprise)</span>
+<nav><a href="index.html#aide">Aide et contact</a><a href="confidentialite.html">Confidentialité</a><a href="conditions.html">Conditions</a><a href="mentions-legales.html">Mentions légales</a></nav></footer></div>
+
+<script>
+const ITEMS=[
+ {id:'a',label:'Serviette de nuit parfumée',score:54,verdict:'Correct',color:'#D6A631',reasons:[['Parfum de synthèse','peut contenir des phtalates non déclarés','−30'],['Cellulose blanchie au chlore','traces de dioxines, sous les seuils sanitaires','−16']],swap:'b'},
+ {id:'c',label:'Protège-slip sans parfum',score:84,verdict:'Favorable',color:'#5A8A4C',reasons:[['Cellulose blanchie au chlore','pas de mention « sans chlore » ou TCF','−16']],swap:null},
+ {id:'b',label:'Serviette de nuit, voile coton bio, sans chlore',score:100,verdict:'Favorable',color:'#5A8A4C',reasons:[],swap:null}];
+const C=527.8,$=id=>document.getElementById(id);
+function show(id){const it=ITEMS.find(x=>x.id===id);
+ $('bar').style.strokeDashoffset=C*(1-it.score/100);$('bar').setAttribute('stroke',it.color);
+ $('score').textContent=it.score;$('verdict').textContent=it.verdict;$('ring-label').setAttribute('aria-label','Score '+it.score+' sur 100, '+it.verdict);
+ const ul=$('reasons');ul.replaceChildren();
+ if(!it.reasons.length){const li=document.createElement('li');li.innerHTML='<span>Rien à signaler<small>aucun parfum, voile en coton bio, blanchi sans chlore</small></span>';ul.append(li)}
+ it.reasons.forEach(([t,d,p])=>{const li=document.createElement('li');const s=document.createElement('span');s.textContent=t;const sm=document.createElement('small');sm.textContent=d;s.append(sm);const e=document.createElement('em');e.textContent=p+' points';li.append(s,e);ul.append(li)});
+ const sw=it.swap&&ITEMS.find(x=>x.id===it.swap);$('swap').innerHTML=sw?'Plutôt ça : <b>'+sw.label.toLowerCase()+'</b>, '+sw.score+'/100':'';
+ document.querySelectorAll('#pick button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.id===id)));}
+ITEMS.forEach(it=>{const b=document.createElement('button');b.type='button';b.dataset.id=it.id;b.textContent=it.label;b.onclick=()=>show(it.id);$('pick').append(b)});
+show('a');
+</script>
+</body></html>
