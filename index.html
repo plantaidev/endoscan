@@ -7,13 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,400..600,0;1,9..144,400..600,0&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Mise en page : une arche cacao (la forme du logo) porte la démonstration ; le reste est calme, aligné à gauche. */
-:root{--cream:#F4ECE2;--paper:#FFFCF8;--cacao:#2E1F1A;--cacao2:#3B2923;--muted:#75605A;--line:#E3D4C4;--terra:#B0512F;--terra-soft:#F2D9CB;
+:root{--ink:#2E1F1A;--cream:#F4ECE2;--paper:#FFFCF8;--cacao:#2E1F1A;--cacao2:#3B2923;--muted:#75605A;--line:#E3D4C4;--terra:#B0512F;--terra-soft:#F2D9CB;
 --lilac:#E7DEF1;--lilac-ink:#5B4A7A;--good:#5A8A4C;--good-ink:#3F6B34;--ok:#D6A631;--ok-ink:#86661A;--limit:#E68A45;--bad:#B3332A;--on-cacao:#F1E4D8;--on-cacao-muted:#BFAA9E;
 --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Hanken Grotesk",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-@media (prefers-color-scheme:dark){:root{--cream:#1F1512;--paper:#2B1D18;--cacao:#120C0A;--cacao2:#2B1D18;--muted:#BFAA9E;--line:#4A3730;--terra:#E9A283;--terra-soft:#4A2E24;--lilac:#3A3149;--lilac-ink:#D8CBEA;--good-ink:#9CC58D;--ok-ink:#E8C766;color-scheme:dark}
-body{color:#F1E4D8}}
+@media (prefers-color-scheme:dark){:root{--ink:#F1E4D8;--cream:#1F1512;--paper:#2B1D18;--cacao:#120C0A;--cacao2:#2B1D18;--muted:#BFAA9E;--line:#4A3730;--terra:#E9A283;--terra-soft:#4A2E24;--lilac:#3A3149;--lilac-ink:#D8CBEA;--good-ink:#9CC58D;--ok-ink:#E8C766;color-scheme:dark}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--cacao);font:17px/1.6 var(--sans)}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 var(--sans)}
 h1,h2,h3{font-family:var(--serif);font-weight:400;font-variation-settings:"WONK" 0;text-wrap:balance;margin:0}
 a{color:var(--terra)}
 :focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
